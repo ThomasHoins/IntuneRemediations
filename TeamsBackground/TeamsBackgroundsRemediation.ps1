@@ -8,7 +8,7 @@ if (-not (Test-Path $TeamsBackgroundPath)) {
 
 # Check if the network share is accessible
 if (Test-Path $NetworkShare) {
-    # Copy files from the share to the Teams background folder
+    # Copy updated/missing files from the share to the Teams background folder
     Copy-Item -Path "$NetworkShare\*" -Destination $TeamsBackgroundPath -Force
     Write-Output "Teams backgrounds copied successfully."
     Exit 0  # Success
